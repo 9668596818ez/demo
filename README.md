@@ -1,6 +1,6 @@
 # demo
 
-## Project setup
+## 关于 vue 的各种实验
 ```
 npm install
 ```

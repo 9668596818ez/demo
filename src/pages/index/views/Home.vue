@@ -1,25 +1,34 @@
 <template>
 	<div class="home">
-		<img alt="Vue logo" src="../../../assets/logo.png">
 		<p>{{ msg }}</p>
 		<svg-icon icon-class="right-circle"/>
-		<svg-icon class="red" icon-class="left-circle"/>
-		<svg-icon icon-class="smile"/>
+		<svg-icon class="red" icon-class="smile"/>
+		<svg-icon icon-class="left-circle"/>
+		<p>
+			<c-button @click.native="sss">submit</c-button>
+		</p>
 	</div>
 </template>
 
 <script>
+import CButton from './components/CButtom'
 export default {
 	name: "home",
+	components:{
+		CButton
+	},
 	data() {
 		return {
-			msg: "msg"
+			msg: "home"
 		};
 	},
 	async created() {
 		await this.init();
 	},
 	methods: {
+		sss(e){
+			console.log(e,111)
+		},
 		init() {
 			return new Promise(resolve => {
 				setTimeout(() => {

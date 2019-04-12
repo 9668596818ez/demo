@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "npm run serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "async-validator": "^1.11.0",
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "lib-flexible": "^0.3.2",
