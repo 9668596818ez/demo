@@ -11,10 +11,11 @@
 </template>
 
 <script>
-import CButton from './components/CButtom'
+import CButton from "./components/CButtom";
+import { setTimeout } from "timers";
 export default {
 	name: "home",
-	components:{
+	components: {
 		CButton
 	},
 	data() {
@@ -23,11 +24,18 @@ export default {
 		};
 	},
 	async created() {
+		let loading;
+		setTimeout(() => {
+			loading = this.$loading();
+		}, 1000);
+		setTimeout(() => {
+			loading.close();
+		}, 10000);
 		await this.init();
 	},
 	methods: {
-		sss(e){
-			console.log(e,111)
+		sss(e) {
+			console.log(e, 111);
 		},
 		init() {
 			return new Promise(resolve => {
@@ -48,4 +56,3 @@ export default {
 	color: red;
 }
 </style>
-

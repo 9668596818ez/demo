@@ -5,6 +5,10 @@ import store from "./store/store";
 import "lib-flexible";
 import "@/icons";
 
+import loading from "../../components/Loading";
+
+Vue.prototype.$loading = loading.service;
+
 Vue.config.productionTip = false;
 
 new Vue({
