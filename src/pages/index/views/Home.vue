@@ -25,12 +25,12 @@ export default {
 	},
 	async created() {
 		let loading;
-		setTimeout(() => {
-			loading = this.$loading();
-		}, 1000);
-		setTimeout(() => {
-			loading.close();
-		}, 10000);
+		// setTimeout(() => {
+		// 	loading = this.$loading();
+		// }, 1000);
+		// setTimeout(() => {
+		// 	loading.close();
+		// }, 10000);
 		await this.init();
 	},
 	methods: {
